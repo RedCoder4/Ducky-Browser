@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.BrowserView = New System.Windows.Forms.WebBrowser()
         Me.BackButton = New System.Windows.Forms.ToolStripButton()
         Me.HomeButton = New System.Windows.Forms.ToolStripButton()
         Me.ForwardButton = New System.Windows.Forms.ToolStripButton()
@@ -31,40 +31,40 @@ Partial Class Form1
         Me.RefreshButton = New System.Windows.Forms.ToolStripButton()
         Me.SearchBox = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.CnclButton = New System.Windows.Forms.ToolStripButton()
+        Me.Tabs = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.ToolStrip3 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStrip4 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStrip5 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton14 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton10 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton11 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton15 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton16 = New System.Windows.Forms.ToolStripButton()
+        Me.BlackBar2 = New System.Windows.Forms.ToolStrip()
+        Me.BlackBar1 = New System.Windows.Forms.ToolStrip()
+        Me.BookmarkBar = New System.Windows.Forms.ToolStrip()
+        Me.Blue = New System.Windows.Forms.ToolStripButton()
+        Me.Orange = New System.Windows.Forms.ToolStripButton()
+        Me.Red = New System.Windows.Forms.ToolStripButton()
+        Me.Green = New System.Windows.Forms.ToolStripButton()
+        Me.Purple = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton8 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton9 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton13 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton12 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.BkMrkTwitter = New System.Windows.Forms.ToolStripButton()
+        Me.BkMrkFacebook = New System.Windows.Forms.ToolStripButton()
+        Me.BkMrkGPlus = New System.Windows.Forms.ToolStripButton()
+        Me.BkMrkYouTube = New System.Windows.Forms.ToolStripButton()
+        Me.BkMrkGitHub = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
-        Me.ToolStrip5.SuspendLayout()
+        Me.Tabs.SuspendLayout()
+        Me.BookmarkBar.SuspendLayout()
         Me.SuspendLayout()
         '
-        'WebBrowser1
+        'BrowserView
         '
-        Me.WebBrowser1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.BrowserView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WebBrowser1.Location = New System.Drawing.Point(0, 65)
-        Me.WebBrowser1.Margin = New System.Windows.Forms.Padding(2)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(15, 16)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(1266, 588)
-        Me.WebBrowser1.TabIndex = 0
-        Me.WebBrowser1.Url = New System.Uri("http://duckduckgo.com", System.UriKind.Absolute)
+        Me.BrowserView.Location = New System.Drawing.Point(0, 65)
+        Me.BrowserView.Margin = New System.Windows.Forms.Padding(2)
+        Me.BrowserView.MinimumSize = New System.Drawing.Size(15, 16)
+        Me.BrowserView.Name = "BrowserView"
+        Me.BrowserView.Size = New System.Drawing.Size(1266, 588)
+        Me.BrowserView.TabIndex = 0
+        Me.BrowserView.Url = New System.Uri("http://duckduckgo.com", System.UriKind.Absolute)
         '
         'BackButton
         '
@@ -131,7 +131,7 @@ Partial Class Form1
         Me.ToolStrip1.CanOverflow = False
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackButton, Me.HomeButton, Me.ForwardButton, Me.ToolStripSeparator1, Me.RefreshButton, Me.SearchBox, Me.ToolStripButton1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackButton, Me.HomeButton, Me.ForwardButton, Me.ToolStripSeparator1, Me.RefreshButton, Me.SearchBox, Me.CnclButton})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 25)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
@@ -140,20 +140,29 @@ Partial Class Form1
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'TabControl1
+        'CnclButton
         '
-        Me.TabControl1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.CnclButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CnclButton.Image = CType(resources.GetObject("CnclButton.Image"), System.Drawing.Image)
+        Me.CnclButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.CnclButton.Name = "CnclButton"
+        Me.CnclButton.Size = New System.Drawing.Size(23, 41)
+        Me.CnclButton.Text = "Cancel"
+        '
+        'Tabs
+        '
+        Me.Tabs.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.TabControl1.Location = New System.Drawing.Point(3, 2)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.RightToLeftLayout = True
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1261, 24)
-        Me.TabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight
-        Me.TabControl1.TabIndex = 3
+        Me.Tabs.Controls.Add(Me.TabPage1)
+        Me.Tabs.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tabs.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Tabs.Location = New System.Drawing.Point(3, 2)
+        Me.Tabs.Name = "Tabs"
+        Me.Tabs.RightToLeftLayout = True
+        Me.Tabs.SelectedIndex = 0
+        Me.Tabs.Size = New System.Drawing.Size(1261, 24)
+        Me.Tabs.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight
+        Me.Tabs.TabIndex = 3
         '
         'TabPage1
         '
@@ -165,103 +174,95 @@ Partial Class Form1
         Me.TabPage1.Text = "Tabs Coming Soon!"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'ToolStrip3
+        'BlackBar2
         '
-        Me.ToolStrip3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.BlackBar2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ToolStrip3.AutoSize = False
-        Me.ToolStrip3.BackColor = System.Drawing.Color.Black
-        Me.ToolStrip3.Dock = System.Windows.Forms.DockStyle.None
-        Me.ToolStrip3.Location = New System.Drawing.Point(-2, 65)
-        Me.ToolStrip3.Name = "ToolStrip3"
-        Me.ToolStrip3.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip3.Size = New System.Drawing.Size(1270, 4)
-        Me.ToolStrip3.TabIndex = 5
-        Me.ToolStrip3.Text = "ToolStrip3"
+        Me.BlackBar2.AutoSize = False
+        Me.BlackBar2.BackColor = System.Drawing.Color.Black
+        Me.BlackBar2.Dock = System.Windows.Forms.DockStyle.None
+        Me.BlackBar2.Location = New System.Drawing.Point(-2, 65)
+        Me.BlackBar2.Name = "BlackBar2"
+        Me.BlackBar2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.BlackBar2.Size = New System.Drawing.Size(1270, 4)
+        Me.BlackBar2.TabIndex = 5
         '
-        'ToolStrip4
+        'BlackBar1
         '
-        Me.ToolStrip4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.BlackBar1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ToolStrip4.AutoSize = False
-        Me.ToolStrip4.BackColor = System.Drawing.Color.Black
-        Me.ToolStrip4.Dock = System.Windows.Forms.DockStyle.None
-        Me.ToolStrip4.Location = New System.Drawing.Point(0, 24)
-        Me.ToolStrip4.Name = "ToolStrip4"
-        Me.ToolStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip4.Size = New System.Drawing.Size(1270, 4)
-        Me.ToolStrip4.TabIndex = 6
-        Me.ToolStrip4.Text = "ToolStrip4"
+        Me.BlackBar1.AutoSize = False
+        Me.BlackBar1.BackColor = System.Drawing.Color.Black
+        Me.BlackBar1.Dock = System.Windows.Forms.DockStyle.None
+        Me.BlackBar1.Location = New System.Drawing.Point(0, 24)
+        Me.BlackBar1.Name = "BlackBar1"
+        Me.BlackBar1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.BlackBar1.Size = New System.Drawing.Size(1270, 4)
+        Me.BlackBar1.TabIndex = 6
         '
-        'ToolStrip5
+        'BookmarkBar
         '
-        Me.ToolStrip5.AutoSize = False
-        Me.ToolStrip5.BackColor = System.Drawing.Color.Black
-        Me.ToolStrip5.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip5.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip5.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton14, Me.ToolStripButton10, Me.ToolStripButton11, Me.ToolStripButton15, Me.ToolStripButton16, Me.ToolStripSeparator2, Me.ToolStripButton8, Me.ToolStripButton7, Me.ToolStripButton9, Me.ToolStripButton13, Me.ToolStripButton12})
-        Me.ToolStrip5.Location = New System.Drawing.Point(0, 655)
-        Me.ToolStrip5.Name = "ToolStrip5"
-        Me.ToolStrip5.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip5.Size = New System.Drawing.Size(1264, 27)
-        Me.ToolStrip5.TabIndex = 7
-        Me.ToolStrip5.Text = "ToolStrip5"
+        Me.BookmarkBar.AutoSize = False
+        Me.BookmarkBar.BackColor = System.Drawing.Color.Black
+        Me.BookmarkBar.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.BookmarkBar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.BookmarkBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Blue, Me.Orange, Me.Red, Me.Green, Me.Purple, Me.ToolStripSeparator2, Me.BkMrkTwitter, Me.BkMrkFacebook, Me.BkMrkGPlus, Me.BkMrkYouTube, Me.BkMrkGitHub})
+        Me.BookmarkBar.Location = New System.Drawing.Point(0, 655)
+        Me.BookmarkBar.Name = "BookmarkBar"
+        Me.BookmarkBar.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.BookmarkBar.Size = New System.Drawing.Size(1264, 27)
+        Me.BookmarkBar.TabIndex = 7
         '
-        'ToolStripButton14
+        'Blue
         '
-        Me.ToolStripButton14.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton14.AutoSize = False
-        Me.ToolStripButton14.BackColor = System.Drawing.Color.Cyan
-        Me.ToolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton14.Name = "ToolStripButton14"
-        Me.ToolStripButton14.Size = New System.Drawing.Size(20, 20)
-        Me.ToolStripButton14.Text = "ToolStripButton3"
+        Me.Blue.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Blue.AutoSize = False
+        Me.Blue.BackColor = System.Drawing.Color.Cyan
+        Me.Blue.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Blue.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Blue.Name = "Blue"
+        Me.Blue.Size = New System.Drawing.Size(20, 20)
         '
-        'ToolStripButton10
+        'Orange
         '
-        Me.ToolStripButton10.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton10.AutoSize = False
-        Me.ToolStripButton10.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ToolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton10.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton10.Name = "ToolStripButton10"
-        Me.ToolStripButton10.Size = New System.Drawing.Size(20, 20)
-        Me.ToolStripButton10.Text = "ToolStripButton2"
+        Me.Orange.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Orange.AutoSize = False
+        Me.Orange.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Orange.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Orange.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.Orange.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Orange.Name = "Orange"
+        Me.Orange.Size = New System.Drawing.Size(20, 20)
         '
-        'ToolStripButton11
+        'Red
         '
-        Me.ToolStripButton11.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton11.AutoSize = False
-        Me.ToolStripButton11.BackColor = System.Drawing.Color.IndianRed
-        Me.ToolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton11.Name = "ToolStripButton11"
-        Me.ToolStripButton11.Size = New System.Drawing.Size(20, 20)
-        Me.ToolStripButton11.Text = "ToolStripButton4"
+        Me.Red.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Red.AutoSize = False
+        Me.Red.BackColor = System.Drawing.Color.IndianRed
+        Me.Red.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Red.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Red.Name = "Red"
+        Me.Red.Size = New System.Drawing.Size(20, 20)
         '
-        'ToolStripButton15
+        'Green
         '
-        Me.ToolStripButton15.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton15.AutoSize = False
-        Me.ToolStripButton15.BackColor = System.Drawing.Color.LimeGreen
-        Me.ToolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton15.Name = "ToolStripButton15"
-        Me.ToolStripButton15.Size = New System.Drawing.Size(20, 20)
-        Me.ToolStripButton15.Text = "ToolStripButton5"
+        Me.Green.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Green.AutoSize = False
+        Me.Green.BackColor = System.Drawing.Color.LimeGreen
+        Me.Green.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Green.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Green.Name = "Green"
+        Me.Green.Size = New System.Drawing.Size(20, 20)
         '
-        'ToolStripButton16
+        'Purple
         '
-        Me.ToolStripButton16.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton16.AutoSize = False
-        Me.ToolStripButton16.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ToolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton16.Name = "ToolStripButton16"
-        Me.ToolStripButton16.Size = New System.Drawing.Size(20, 20)
-        Me.ToolStripButton16.Text = "ToolStripButton6"
+        Me.Purple.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Purple.AutoSize = False
+        Me.Purple.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Purple.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Purple.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Purple.Name = "Purple"
+        Me.Purple.Size = New System.Drawing.Size(20, 20)
         '
         'ToolStripSeparator2
         '
@@ -271,74 +272,65 @@ Partial Class Form1
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
         Me.ToolStripSeparator2.Visible = False
         '
-        'ToolStripButton8
+        'BkMrkTwitter
         '
-        Me.ToolStripButton8.AutoSize = False
-        Me.ToolStripButton8.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ToolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton8.Image = CType(resources.GetObject("ToolStripButton8.Image"), System.Drawing.Image)
-        Me.ToolStripButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ToolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton8.Name = "ToolStripButton8"
-        Me.ToolStripButton8.Size = New System.Drawing.Size(20, 20)
-        Me.ToolStripButton8.Text = "ToolStripButton2"
+        Me.BkMrkTwitter.AutoSize = False
+        Me.BkMrkTwitter.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BkMrkTwitter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BkMrkTwitter.Image = CType(resources.GetObject("BkMrkTwitter.Image"), System.Drawing.Image)
+        Me.BkMrkTwitter.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BkMrkTwitter.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BkMrkTwitter.Name = "BkMrkTwitter"
+        Me.BkMrkTwitter.Size = New System.Drawing.Size(20, 20)
+        Me.BkMrkTwitter.Text = "Twitter"
         '
-        'ToolStripButton7
+        'BkMrkFacebook
         '
-        Me.ToolStripButton7.AutoSize = False
-        Me.ToolStripButton7.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ToolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton7.Image = CType(resources.GetObject("ToolStripButton7.Image"), System.Drawing.Image)
-        Me.ToolStripButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton7.Name = "ToolStripButton7"
-        Me.ToolStripButton7.Size = New System.Drawing.Size(20, 20)
-        Me.ToolStripButton7.Text = "ToolStripButton2"
+        Me.BkMrkFacebook.AutoSize = False
+        Me.BkMrkFacebook.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BkMrkFacebook.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BkMrkFacebook.Image = CType(resources.GetObject("BkMrkFacebook.Image"), System.Drawing.Image)
+        Me.BkMrkFacebook.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BkMrkFacebook.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BkMrkFacebook.Name = "BkMrkFacebook"
+        Me.BkMrkFacebook.Size = New System.Drawing.Size(20, 20)
+        Me.BkMrkFacebook.Text = "Facebook"
         '
-        'ToolStripButton9
+        'BkMrkGPlus
         '
-        Me.ToolStripButton9.AutoSize = False
-        Me.ToolStripButton9.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ToolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton9.Image = CType(resources.GetObject("ToolStripButton9.Image"), System.Drawing.Image)
-        Me.ToolStripButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ToolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton9.Name = "ToolStripButton9"
-        Me.ToolStripButton9.Size = New System.Drawing.Size(20, 20)
-        Me.ToolStripButton9.Text = "ToolStripButton2"
+        Me.BkMrkGPlus.AutoSize = False
+        Me.BkMrkGPlus.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BkMrkGPlus.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BkMrkGPlus.Image = CType(resources.GetObject("BkMrkGPlus.Image"), System.Drawing.Image)
+        Me.BkMrkGPlus.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BkMrkGPlus.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BkMrkGPlus.Name = "BkMrkGPlus"
+        Me.BkMrkGPlus.Size = New System.Drawing.Size(20, 20)
+        Me.BkMrkGPlus.Text = "Google+"
         '
-        'ToolStripButton13
+        'BkMrkYouTube
         '
-        Me.ToolStripButton13.AutoSize = False
-        Me.ToolStripButton13.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ToolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton13.Image = CType(resources.GetObject("ToolStripButton13.Image"), System.Drawing.Image)
-        Me.ToolStripButton13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ToolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton13.Name = "ToolStripButton13"
-        Me.ToolStripButton13.Size = New System.Drawing.Size(20, 20)
-        Me.ToolStripButton13.Text = "ToolStripButton2"
+        Me.BkMrkYouTube.AutoSize = False
+        Me.BkMrkYouTube.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BkMrkYouTube.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BkMrkYouTube.Image = CType(resources.GetObject("BkMrkYouTube.Image"), System.Drawing.Image)
+        Me.BkMrkYouTube.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BkMrkYouTube.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BkMrkYouTube.Name = "BkMrkYouTube"
+        Me.BkMrkYouTube.Size = New System.Drawing.Size(20, 20)
+        Me.BkMrkYouTube.Text = "YouTube"
         '
-        'ToolStripButton12
+        'BkMrkGitHub
         '
-        Me.ToolStripButton12.AutoSize = False
-        Me.ToolStripButton12.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ToolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton12.Image = CType(resources.GetObject("ToolStripButton12.Image"), System.Drawing.Image)
-        Me.ToolStripButton12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ToolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton12.Name = "ToolStripButton12"
-        Me.ToolStripButton12.Size = New System.Drawing.Size(20, 20)
-        Me.ToolStripButton12.Text = "ToolStripButton2"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 41)
-        Me.ToolStripButton1.Text = "Cancel"
+        Me.BkMrkGitHub.AutoSize = False
+        Me.BkMrkGitHub.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BkMrkGitHub.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BkMrkGitHub.Image = CType(resources.GetObject("BkMrkGitHub.Image"), System.Drawing.Image)
+        Me.BkMrkGitHub.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BkMrkGitHub.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BkMrkGitHub.Name = "BkMrkGitHub"
+        Me.BkMrkGitHub.Size = New System.Drawing.Size(20, 20)
+        Me.BkMrkGitHub.Text = "GitHub"
         '
         'Form1
         '
@@ -346,12 +338,12 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkTurquoise
         Me.ClientSize = New System.Drawing.Size(1264, 682)
-        Me.Controls.Add(Me.ToolStrip5)
-        Me.Controls.Add(Me.ToolStrip4)
-        Me.Controls.Add(Me.ToolStrip3)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.BookmarkBar)
+        Me.Controls.Add(Me.BlackBar1)
+        Me.Controls.Add(Me.BlackBar2)
+        Me.Controls.Add(Me.Tabs)
         Me.Controls.Add(Me.ToolStrip1)
-        Me.Controls.Add(Me.WebBrowser1)
+        Me.Controls.Add(Me.BrowserView)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MinimumSize = New System.Drawing.Size(1280, 720)
@@ -361,13 +353,13 @@ Partial Class Form1
         Me.Text = "DuckyBrowser PRE-ALPHA v0.1"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
-        Me.ToolStrip5.ResumeLayout(False)
-        Me.ToolStrip5.PerformLayout()
+        Me.Tabs.ResumeLayout(False)
+        Me.BookmarkBar.ResumeLayout(False)
+        Me.BookmarkBar.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
+    Friend WithEvents BrowserView As System.Windows.Forms.WebBrowser
     Friend WithEvents BackButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents HomeButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents ForwardButton As System.Windows.Forms.ToolStripButton
@@ -375,22 +367,22 @@ Partial Class Form1
     Friend WithEvents RefreshButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents SearchBox As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents Tabs As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents ToolStrip3 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStrip4 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStrip5 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripButton7 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton8 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton9 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton12 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton13 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton14 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton10 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton11 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton15 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton16 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BlackBar2 As System.Windows.Forms.ToolStrip
+    Friend WithEvents BlackBar1 As System.Windows.Forms.ToolStrip
+    Friend WithEvents BookmarkBar As System.Windows.Forms.ToolStrip
+    Friend WithEvents BkMrkFacebook As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BkMrkTwitter As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BkMrkGPlus As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BkMrkGitHub As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BkMrkYouTube As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Blue As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Orange As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Red As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Green As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Purple As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents CnclButton As System.Windows.Forms.ToolStripButton
 
 End Class
