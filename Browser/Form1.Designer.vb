@@ -32,6 +32,13 @@ Partial Class Form1
         Me.SearchBox = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.CnclButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SrchEngine = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.DuckGo = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Google = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Yahoo = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Bing = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SearchEngBox = New System.Windows.Forms.ToolStripTextBox()
         Me.Tabs = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.BlackBar2 = New System.Windows.Forms.ToolStrip()
@@ -42,12 +49,15 @@ Partial Class Form1
         Me.Red = New System.Windows.Forms.ToolStripButton()
         Me.Green = New System.Windows.Forms.ToolStripButton()
         Me.Purple = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.BkMrkTwitter = New System.Windows.Forms.ToolStripButton()
         Me.BkMrkFacebook = New System.Windows.Forms.ToolStripButton()
         Me.BkMrkGPlus = New System.Windows.Forms.ToolStripButton()
         Me.BkMrkYouTube = New System.Windows.Forms.ToolStripButton()
         Me.BkMrkGitHub = New System.Windows.Forms.ToolStripButton()
+        Me.BlackBar3 = New System.Windows.Forms.ToolStrip()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.Gray = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         Me.Tabs.SuspendLayout()
         Me.BookmarkBar.SuspendLayout()
@@ -58,11 +68,11 @@ Partial Class Form1
         Me.BrowserView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BrowserView.Location = New System.Drawing.Point(0, 65)
+        Me.BrowserView.Location = New System.Drawing.Point(0, 96)
         Me.BrowserView.Margin = New System.Windows.Forms.Padding(2)
         Me.BrowserView.MinimumSize = New System.Drawing.Size(15, 16)
         Me.BrowserView.Name = "BrowserView"
-        Me.BrowserView.Size = New System.Drawing.Size(1266, 588)
+        Me.BrowserView.Size = New System.Drawing.Size(1264, 564)
         Me.BrowserView.TabIndex = 0
         Me.BrowserView.Url = New System.Uri("http://duckduckgo.com", System.UriKind.Absolute)
         '
@@ -120,25 +130,24 @@ Partial Class Form1
         Me.SearchBox.MaxLength = 42767
         Me.SearchBox.MergeAction = System.Windows.Forms.MergeAction.Insert
         Me.SearchBox.Name = "SearchBox"
-        Me.SearchBox.Size = New System.Drawing.Size(1000, 44)
+        Me.SearchBox.Size = New System.Drawing.Size(950, 44)
         '
         'ToolStrip1
         '
         Me.ToolStrip1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ToolStrip1.AutoSize = False
-        Me.ToolStrip1.BackColor = System.Drawing.Color.Cyan
+        Me.ToolStrip1.BackColor = System.Drawing.Color.Gainsboro
         Me.ToolStrip1.CanOverflow = False
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackButton, Me.HomeButton, Me.ForwardButton, Me.ToolStripSeparator1, Me.RefreshButton, Me.SearchBox, Me.CnclButton})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackButton, Me.HomeButton, Me.ForwardButton, Me.ToolStripSeparator1, Me.RefreshButton, Me.SearchBox, Me.CnclButton, Me.ToolStripSeparator2, Me.SrchEngine, Me.SearchEngBox})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 25)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         Me.ToolStrip1.Size = New System.Drawing.Size(1654, 44)
         Me.ToolStrip1.Stretch = True
         Me.ToolStrip1.TabIndex = 1
-        Me.ToolStrip1.Text = "ToolStrip1"
         '
         'CnclButton
         '
@@ -148,6 +157,61 @@ Partial Class Form1
         Me.CnclButton.Name = "CnclButton"
         Me.CnclButton.Size = New System.Drawing.Size(23, 41)
         Me.CnclButton.Text = "Cancel"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 44)
+        '
+        'SrchEngine
+        '
+        Me.SrchEngine.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SrchEngine.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DuckGo, Me.Google, Me.Yahoo, Me.Bing})
+        Me.SrchEngine.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.SrchEngine.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SrchEngine.Name = "SrchEngine"
+        Me.SrchEngine.Size = New System.Drawing.Size(13, 41)
+        '
+        'DuckGo
+        '
+        Me.DuckGo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DuckGo.Image = CType(resources.GetObject("DuckGo.Image"), System.Drawing.Image)
+        Me.DuckGo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.DuckGo.Name = "DuckGo"
+        Me.DuckGo.Size = New System.Drawing.Size(160, 30)
+        Me.DuckGo.Text = "DuckDuckGo"
+        '
+        'Google
+        '
+        Me.Google.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Google.Image = Global.Browser.My.Resources.Resources._1414034239_social_google_box
+        Me.Google.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Google.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.Google.Name = "Google"
+        Me.Google.Size = New System.Drawing.Size(160, 30)
+        Me.Google.Text = "Google"
+        '
+        'Yahoo
+        '
+        Me.Yahoo.Image = CType(resources.GetObject("Yahoo.Image"), System.Drawing.Image)
+        Me.Yahoo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.Yahoo.Name = "Yahoo"
+        Me.Yahoo.Size = New System.Drawing.Size(160, 30)
+        Me.Yahoo.Text = "Yahoo"
+        '
+        'Bing
+        '
+        Me.Bing.Image = CType(resources.GetObject("Bing.Image"), System.Drawing.Image)
+        Me.Bing.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.Bing.Name = "Bing"
+        Me.Bing.Size = New System.Drawing.Size(160, 30)
+        Me.Bing.Text = "Bing"
+        '
+        'SearchEngBox
+        '
+        Me.SearchEngBox.AutoSize = False
+        Me.SearchEngBox.Name = "SearchEngBox"
+        Me.SearchEngBox.Size = New System.Drawing.Size(110, 44)
         '
         'Tabs
         '
@@ -179,7 +243,7 @@ Partial Class Form1
         Me.BlackBar2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BlackBar2.AutoSize = False
-        Me.BlackBar2.BackColor = System.Drawing.Color.Black
+        Me.BlackBar2.BackColor = System.Drawing.Color.DimGray
         Me.BlackBar2.Dock = System.Windows.Forms.DockStyle.None
         Me.BlackBar2.Location = New System.Drawing.Point(-2, 65)
         Me.BlackBar2.Name = "BlackBar2"
@@ -194,20 +258,23 @@ Partial Class Form1
         Me.BlackBar1.AutoSize = False
         Me.BlackBar1.BackColor = System.Drawing.Color.Black
         Me.BlackBar1.Dock = System.Windows.Forms.DockStyle.None
-        Me.BlackBar1.Location = New System.Drawing.Point(0, 24)
+        Me.BlackBar1.Location = New System.Drawing.Point(-17, 22)
         Me.BlackBar1.Name = "BlackBar1"
         Me.BlackBar1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.BlackBar1.Size = New System.Drawing.Size(1270, 4)
+        Me.BlackBar1.Size = New System.Drawing.Size(1300, 4)
         Me.BlackBar1.TabIndex = 6
         '
         'BookmarkBar
         '
+        Me.BookmarkBar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BookmarkBar.AutoSize = False
-        Me.BookmarkBar.BackColor = System.Drawing.Color.Black
-        Me.BookmarkBar.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.BookmarkBar.BackColor = System.Drawing.SystemColors.Control
+        Me.BookmarkBar.CanOverflow = False
+        Me.BookmarkBar.Dock = System.Windows.Forms.DockStyle.None
         Me.BookmarkBar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.BookmarkBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Blue, Me.Orange, Me.Red, Me.Green, Me.Purple, Me.ToolStripSeparator2, Me.BkMrkTwitter, Me.BkMrkFacebook, Me.BkMrkGPlus, Me.BkMrkYouTube, Me.BkMrkGitHub})
-        Me.BookmarkBar.Location = New System.Drawing.Point(0, 655)
+        Me.BookmarkBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Gray, Me.Blue, Me.Orange, Me.Red, Me.Green, Me.Purple, Me.ToolStripSeparator3, Me.BkMrkTwitter, Me.BkMrkFacebook, Me.BkMrkGPlus, Me.BkMrkYouTube, Me.BkMrkGitHub})
+        Me.BookmarkBar.Location = New System.Drawing.Point(0, 67)
         Me.BookmarkBar.Name = "BookmarkBar"
         Me.BookmarkBar.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         Me.BookmarkBar.Size = New System.Drawing.Size(1264, 27)
@@ -264,13 +331,14 @@ Partial Class Form1
         Me.Purple.Name = "Purple"
         Me.Purple.Size = New System.Drawing.Size(20, 20)
         '
-        'ToolStripSeparator2
+        'ToolStripSeparator3
         '
-        Me.ToolStripSeparator2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
-        Me.ToolStripSeparator2.Visible = False
+        Me.ToolStripSeparator3.AutoSize = False
+        Me.ToolStripSeparator3.BackColor = System.Drawing.Color.Transparent
+        Me.ToolStripSeparator3.ForeColor = System.Drawing.Color.Transparent
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator3.Visible = False
         '
         'BkMrkTwitter
         '
@@ -332,12 +400,45 @@ Partial Class Form1
         Me.BkMrkGitHub.Size = New System.Drawing.Size(20, 20)
         Me.BkMrkGitHub.Text = "GitHub"
         '
+        'BlackBar3
+        '
+        Me.BlackBar3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BlackBar3.AutoSize = False
+        Me.BlackBar3.BackColor = System.Drawing.Color.DimGray
+        Me.BlackBar3.Dock = System.Windows.Forms.DockStyle.None
+        Me.BlackBar3.Location = New System.Drawing.Point(-3, 92)
+        Me.BlackBar3.Name = "BlackBar3"
+        Me.BlackBar3.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.BlackBar3.Size = New System.Drawing.Size(1270, 4)
+        Me.BlackBar3.TabIndex = 8
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 660)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(1264, 22)
+        Me.StatusStrip1.TabIndex = 9
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'Gray
+        '
+        Me.Gray.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Gray.AutoSize = False
+        Me.Gray.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.Gray.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Gray.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Gray.Name = "Gray"
+        Me.Gray.Size = New System.Drawing.Size(20, 20)
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.BackColor = System.Drawing.Color.DarkGray
         Me.ClientSize = New System.Drawing.Size(1264, 682)
+        Me.Controls.Add(Me.StatusStrip1)
+        Me.Controls.Add(Me.BlackBar3)
         Me.Controls.Add(Me.BookmarkBar)
         Me.Controls.Add(Me.BlackBar1)
         Me.Controls.Add(Me.BlackBar2)
@@ -357,6 +458,7 @@ Partial Class Form1
         Me.BookmarkBar.ResumeLayout(False)
         Me.BookmarkBar.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents BrowserView As System.Windows.Forms.WebBrowser
@@ -382,7 +484,17 @@ Partial Class Form1
     Friend WithEvents Red As System.Windows.Forms.ToolStripButton
     Friend WithEvents Green As System.Windows.Forms.ToolStripButton
     Friend WithEvents Purple As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents CnclButton As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BlackBar3 As System.Windows.Forms.ToolStrip
+    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents SrchEngine As System.Windows.Forms.ToolStripDropDownButton
+    Friend WithEvents SearchEngBox As System.Windows.Forms.ToolStripTextBox
+    Friend WithEvents DuckGo As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Google As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Yahoo As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Bing As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
+    Friend WithEvents Gray As System.Windows.Forms.ToolStripButton
 
 End Class

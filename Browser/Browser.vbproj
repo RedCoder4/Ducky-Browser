@@ -164,6 +164,7 @@
   <ItemGroup>
     <Content Include="duck-64.ico" />
     <Content Include="Resources\1411172387_icon-ios7-arrow-forward-32.png" />
+    <None Include="Resources\1414034239_social_google_box.png" />
     <Content Include="Resources\duckz.png" />
     <Content Include="Resources\icon-ios7-arrow-back-128.png" />
   </ItemGroup>
