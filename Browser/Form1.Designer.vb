@@ -463,7 +463,7 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "DuckyBrowser PRE-ALPHA v0.1"
+        Me.Text = "DuckyBrowser PRE-ALPHA v0.2"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.Tabs.ResumeLayout(False)
