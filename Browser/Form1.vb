@@ -7,6 +7,8 @@
 
     Private Sub SearchBoxEnterDown(sender As Object, e As KeyEventArgs) Handles SearchBox.KeyDown
         If (e.KeyCode = Keys.Enter) Then
+            e.Handled = True
+            e.SuppressKeyPress = True
             BrowserView.Navigate(SearchBox.Text)
             SearchBox.Text = BrowserView.Url.ToString
         End If
@@ -19,24 +21,32 @@
         img4 = Bing.Image
 
         If (e.KeyCode = Keys.Enter) And SrchEngine.Image Is img1 Then
+            e.Handled = True
+            e.SuppressKeyPress = True
             BrowserView.Navigate("https://duckduckgo.com/?q=" + SearchEngBox.Text)
             SearchBox.Text = BrowserView.Url.ToString
-        End If
 
-        If (e.KeyCode = Keys.Enter) And SrchEngine.Image Is img2 Then
+        ElseIf (e.KeyCode = Keys.Enter) And SrchEngine.Image Is img2 Then
+            e.Handled = True
+            e.SuppressKeyPress = True
             BrowserView.Navigate("https://www.google.com/?gws_rd=ssl#q=" + SearchEngBox.Text)
             SearchBox.Text = BrowserView.Url.ToString
-        End If
 
-        If (e.KeyCode = Keys.Enter) And SrchEngine.Image Is img3 Then
+
+        ElseIf (e.KeyCode = Keys.Enter) And SrchEngine.Image Is img3 Then
+            e.Handled = True
+            e.SuppressKeyPress = True
             BrowserView.Navigate("https://search.yahoo.com/search;_ylt=?p=" + SearchEngBox.Text)
             SearchBox.Text = BrowserView.Url.ToString
-        End If
 
-        If (e.KeyCode = Keys.Enter) And SrchEngine.Image Is img4 Then
+
+        ElseIf (e.KeyCode = Keys.Enter) And SrchEngine.Image Is img4 Then
+            e.Handled = True
+            e.SuppressKeyPress = True
             BrowserView.Navigate("http://www.bing.com/search?q=" + SearchEngBox.Text)
             SearchBox.Text = BrowserView.Url.ToString
         End If
+
     End Sub
 
     Private Sub WebBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles BrowserView.DocumentCompleted
@@ -66,9 +76,9 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         img1 = DuckGo.Image
-
         SrchEngine.Image = img1
     End Sub
+
     Private Sub RefreshButton_Click(sender As Object, e As EventArgs) Handles RefreshButton.Click
         BrowserView.Refresh()
     End Sub
@@ -162,5 +172,9 @@
     Private Sub Gray_Click(sender As Object, e As EventArgs) Handles Gray.Click
         Me.BackColor = Color.DarkGray
         ToolStrip1.BackColor = Color.Gainsboro
+    End Sub
+
+    Private Sub BkMrkDuckyMedia_Click(sender As Object, e As EventArgs) Handles BkMrkDuckyMedia.Click
+        BrowserView.Navigate("http://duckymedia.org.uk/")
     End Sub
 End Class

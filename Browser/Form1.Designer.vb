@@ -44,6 +44,7 @@ Partial Class Form1
         Me.BlackBar2 = New System.Windows.Forms.ToolStrip()
         Me.BlackBar1 = New System.Windows.Forms.ToolStrip()
         Me.BookmarkBar = New System.Windows.Forms.ToolStrip()
+        Me.Gray = New System.Windows.Forms.ToolStripButton()
         Me.Blue = New System.Windows.Forms.ToolStripButton()
         Me.Orange = New System.Windows.Forms.ToolStripButton()
         Me.Red = New System.Windows.Forms.ToolStripButton()
@@ -57,7 +58,7 @@ Partial Class Form1
         Me.BkMrkGitHub = New System.Windows.Forms.ToolStripButton()
         Me.BlackBar3 = New System.Windows.Forms.ToolStrip()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.Gray = New System.Windows.Forms.ToolStripButton()
+        Me.BkMrkDuckyMedia = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         Me.Tabs.SuspendLayout()
         Me.BookmarkBar.SuspendLayout()
@@ -273,12 +274,22 @@ Partial Class Form1
         Me.BookmarkBar.CanOverflow = False
         Me.BookmarkBar.Dock = System.Windows.Forms.DockStyle.None
         Me.BookmarkBar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.BookmarkBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Gray, Me.Blue, Me.Orange, Me.Red, Me.Green, Me.Purple, Me.ToolStripSeparator3, Me.BkMrkTwitter, Me.BkMrkFacebook, Me.BkMrkGPlus, Me.BkMrkYouTube, Me.BkMrkGitHub})
+        Me.BookmarkBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Gray, Me.Blue, Me.Orange, Me.Red, Me.Green, Me.Purple, Me.ToolStripSeparator3, Me.BkMrkTwitter, Me.BkMrkFacebook, Me.BkMrkGPlus, Me.BkMrkYouTube, Me.BkMrkGitHub, Me.BkMrkDuckyMedia})
         Me.BookmarkBar.Location = New System.Drawing.Point(0, 67)
         Me.BookmarkBar.Name = "BookmarkBar"
         Me.BookmarkBar.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         Me.BookmarkBar.Size = New System.Drawing.Size(1264, 27)
         Me.BookmarkBar.TabIndex = 7
+        '
+        'Gray
+        '
+        Me.Gray.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Gray.AutoSize = False
+        Me.Gray.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.Gray.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Gray.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Gray.Name = "Gray"
+        Me.Gray.Size = New System.Drawing.Size(20, 20)
         '
         'Blue
         '
@@ -421,15 +432,14 @@ Partial Class Form1
         Me.StatusStrip1.TabIndex = 9
         Me.StatusStrip1.Text = "StatusStrip1"
         '
-        'Gray
+        'BkMrkDuckyMedia
         '
-        Me.Gray.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.Gray.AutoSize = False
-        Me.Gray.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.Gray.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.Gray.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Gray.Name = "Gray"
-        Me.Gray.Size = New System.Drawing.Size(20, 20)
+        Me.BkMrkDuckyMedia.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BkMrkDuckyMedia.Image = CType(resources.GetObject("BkMrkDuckyMedia.Image"), System.Drawing.Image)
+        Me.BkMrkDuckyMedia.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BkMrkDuckyMedia.Name = "BkMrkDuckyMedia"
+        Me.BkMrkDuckyMedia.Size = New System.Drawing.Size(23, 24)
+        Me.BkMrkDuckyMedia.Text = "Ducky Media"
         '
         'Form1
         '
@@ -496,5 +506,6 @@ Partial Class Form1
     Friend WithEvents Bing As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents Gray As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BkMrkDuckyMedia As System.Windows.Forms.ToolStripButton
 
 End Class
