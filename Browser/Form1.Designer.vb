@@ -127,11 +127,12 @@ Partial Class Form1
         Me.SearchBox.AcceptsReturn = True
         Me.SearchBox.AutoSize = False
         Me.SearchBox.BackColor = System.Drawing.SystemColors.Control
+        Me.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.SearchBox.ForeColor = System.Drawing.SystemColors.WindowText
         Me.SearchBox.MaxLength = 42767
         Me.SearchBox.MergeAction = System.Windows.Forms.MergeAction.Insert
         Me.SearchBox.Name = "SearchBox"
-        Me.SearchBox.Size = New System.Drawing.Size(950, 44)
+        Me.SearchBox.Size = New System.Drawing.Size(950, 23)
         '
         'ToolStrip1
         '
@@ -211,8 +212,9 @@ Partial Class Form1
         'SearchEngBox
         '
         Me.SearchEngBox.AutoSize = False
+        Me.SearchEngBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.SearchEngBox.Name = "SearchEngBox"
-        Me.SearchEngBox.Size = New System.Drawing.Size(110, 44)
+        Me.SearchEngBox.Size = New System.Drawing.Size(110, 23)
         '
         'Tabs
         '
